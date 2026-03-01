@@ -20,7 +20,7 @@ creds = Credentials.from_service_account_file('service_account.json.json', scope
 client = gspread.authorize(creds)
 
 # *** ใส่ชื่อไฟล์ Google Sheets ของคุณที่สร้างไว้ตรงนี้ ***
-SHEET_NAME = "ชื่อไฟล์GoogleSheetsของคุณ" 
+SHEET_NAME = "ไฟล์บอท อ่านไลน์" 
 sheet = client.open(SHEET_NAME).sheet1
 
 app = Flask(__name__)
@@ -58,3 +58,4 @@ def callback():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
