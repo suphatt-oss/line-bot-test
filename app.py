@@ -16,7 +16,7 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 # 2. ตั้งค่า Google Sheets
 # ตรวจสอบว่าชื่อไฟล์ JSON ใน GitHub ตรงกับที่เขียนด้านล่างนี้นะครับ
 scope = ['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-creds = Credentials.from_service_account_file('service_account.json.json', scopes=scope)
+creds = Credentials.from_service_account_file('service_account.json', scopes=scope)
 client = gspread.authorize(creds)
 
 # *** ใส่ชื่อไฟล์ Google Sheets ของคุณที่สร้างไว้ตรงนี้ ***
@@ -58,4 +58,5 @@ def callback():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
 
