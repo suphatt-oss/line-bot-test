@@ -3,7 +3,7 @@ from flask import Flask, request
 import requests
 
 # เอา Token จาก LINE Developers มาใส่ตรงนี้
-LINE_CHANNEL_ACCESS_TOKEN = "ใส่_TOKEN_ของคุณที่นี่"
+LINE_CHANNEL_ACCESS_TOKEN = "hv9ERohtfhe/2dqeOdem0Rcn0VRxMXKCWy/l7aVkEExFvGwpRKKUr8KSOsgRhxqoIwm+zU4Tk3t1QnDQy/jNJswcVeserDZQyaNxCxUMtELZrJxFHCzrXJGyndzAG95cMp+aRSCrlgXz415OaeeGlQdB04t89/1O/w1cDnyilFU="
 
 app = Flask(__name__)
 
@@ -37,3 +37,4 @@ def callback():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
